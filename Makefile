@@ -17,3 +17,12 @@ hooks: ## Setup pre commit.
 
 validate: ## Validate files with pre-commit hooks
 	@pre-commit run --all-files
+
+run-help:## Run help
+	@go run main.go context --help
+
+run: ## Run cli
+	@go run main.go context --context test/fixtures/context/users users.elliot
+
+build: ## Build go libraries
+	@go build main.go
